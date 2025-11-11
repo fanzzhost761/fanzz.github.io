@@ -1,0 +1,73 @@
+body {
+  background-color: #ffdde1; /* Warna pink lembut */
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+  background-color: #e53935; /* Merah hati */
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+  animation: beat 1s infinite alternate;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background-color: #e53935;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -45px;
+  left: 0;
+}
+
+.heart:after {
+  left: 45px;
+  top: 0;
+}
+
+.message {
+  margin-top: 30px;
+  color: #c62828; /* Merah gelap */
+}
+
+.message h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1em;
+}
+
+@keyframes beat {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+}
